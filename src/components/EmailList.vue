@@ -34,10 +34,11 @@ import EmailRow from './EmailRow.vue'
     .email-list{
         flex: 1;
         overflow: scroll;
+        padding-bottom: 2px;
     }
     .email-settings{
         position: sticky;
-        top: 10px;
+        top: 3px;
         display:flex;
         align-items:center;
         justify-content:space-between;
@@ -46,8 +47,11 @@ import EmailRow from './EmailRow.vue'
     .email-settings__right{
         padding-right: 20px;
     }
+    .email-settings__right span:first-child{
+        opacity: .5;
+    }
     .email-settings__left{ 
-        padding-left: 20px;
+        padding-left: 10px;
     }
 
     .email-list__tab{
@@ -56,9 +60,15 @@ import EmailRow from './EmailRow.vue'
         background-color: #fff;
         box-shadow: 0px 2px whitesmoke;
     }
+    .material-icons{
+        background-color: none;
+        padding: 8px;
+        cursor: pointer;
+        font-size:1.3rem;
+    }
     .material-icons:hover {
         background-color: rgba(0, 0, 0,0.1);
         border-radius: 50%;
     }
-    
+
 </style>

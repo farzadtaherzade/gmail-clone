@@ -61,4 +61,10 @@ const options = ref([
         color:#000;
         font-weight:normal;
     }
+    .option:hover:not(:first-child){
+        background-color: rgba(0, 0, 0,0.1);
+    }
+    .option:hover h4{
+        background-color: transparent
+    }
 </style>

@@ -30,18 +30,19 @@ import options from './SideBarOptions.vue'
         margin-bottom: 15px;
 
         border: none;
+        cursor: pointer;
         border-radius: 30px;
         background-color: #fff;
         color: gray;
         box-shadow: 0px 2px 5px -2px rgba(0,0,0,.75);
+        transition: .3s;
     }
 
     .btn span{
         margin-right: 10px;
         margin-left: -10px;
     }
-    .material-icons:hover {
-        background-color: rgba(0, 0, 0,0.1);
-        border-radius: 50%;
+    .btn:hover{
+        box-shadow: 0px 3px 10px -2px rgba(0,0,0,.5);
     }
 </style>

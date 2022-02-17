@@ -49,8 +49,13 @@
         box-shadow: 0px 4px 4px -2px rgba(0,0,0,0.24);
     }
     .icons span {
-        font-size: 1rem;
+        font-size: 18px;
         padding-right: 10px;
+        color: rgba(0,0,0,0.2);
+    }
+    .icons{
+        display: flex;
+        align-items: center;
     }
     .message{
         display: flex;

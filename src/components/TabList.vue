@@ -2,13 +2,25 @@
     import { ref } from 'vue';
 
     const options = ref([
-        {icon:'inbox', title:'Primary', class:'red' , selected: true},
+        {icon:'inbox', title:'Primary', class:'red' , selected: false},
         {icon:'people', title:'Social', class:'blue' , selected: false},
         {icon:'local_offer', title:'Promotions', class:'green' , selected: false},
     ])
 
     function changeColor(e) {
-        console.log(e)
+        if (e.icon === 'inbox') {
+            options.value[0].selected = true
+            options.value[1].selected = false
+            options.value[2].selected = false
+        }else if (e.icon === 'people') {
+            options.value[0].selected = false
+            options.value[1].selected = true
+            options.value[2].selected = false
+        }else if (e.icon === 'local_offer') {
+            options.value[0].selected = false
+            options.value[1].selected = false
+            options.value[2].selected = true
+        }
     }
 </script>
 
@@ -28,7 +40,7 @@
         border-bottom-width:2px ;
         padding: 18px 20px;
         margin-top:9px;
-        min-width: 200px;
+        min-width: 250px;
         cursor: pointer;
         color: gray;
     }
@@ -54,4 +66,15 @@
         background-color: #fff;
         border-width: 3px;
     }
+    .tab-list span {
+        font-size: 19px;
+    }
+    .tab-list:hover{
+        background-color: rgba(0, 0, 0,.05);
+    }
+    .tab-list:hover:not(:first-child){
+        background-color: rgba(0, 0, 0,.05);
+        color: #000;
+    }
+
 </style>

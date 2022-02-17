@@ -110,9 +110,14 @@
     cursor: pointer;
 }
 
+.material-icons{
+    background-color: none;
+}
+
 .material-icons:hover , .conter-content i:hover {
     background-color: rgba(0, 0, 0,0.1);
     border-radius: 50%;
+    transition: .01s ;
 }
 
 </style>
