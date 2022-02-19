@@ -22,15 +22,17 @@
             <span class="material-icons">{{icons[2]}}</span>
         </div>
 
-        <h3 class="title">{{option.title}}</h3>
+        <div class="flex">
+            <h3 class="title">{{option.title}}</h3>
 
-        <div class="message">
-            <h4>{{option.subject}} <span class="message-desc"> {{option.desc}} </span> </h4>
+            <div class="message">
+                <h4>{{option.subject}} <span class="message-desc">- {{option.desc}} </span> </h4>
+            </div>
         </div>
 
-        <p class="time">
+        <span class="time">
             {{option.time}}
-        </p>
+        </span>
 
     </div>
 </template>
@@ -39,6 +41,7 @@
     .email-row{
         display: flex;
         align-items: center;
+        flex-wrap: no-wrap;
         height:50px;
         border-bottom:1px solid whitesmoke;
         border-top: 1px solid whitesmoke;
@@ -72,9 +75,9 @@
         padding-right: 5px;
     }
     .title{
-        margin-left: 2;
+        margin-left: 2px;
         font-size:14px;
-        flex:.3;
+        flex:.1;
     }
     .time{
         padding-right:15px;
@@ -85,4 +88,29 @@
         font-weight: 400;
         color: gray;
     }
+    .flex {
+        display: flex;
+        flex: 1;
+    }
+
+    @media (max-width: 560px) {
+        .material-icons:not(:first-child , :last-child) {
+            display: none;
+        }
+        .flex{
+            flex-direction: column;
+        }
+    }
+    @media (max-width: 320px) , (max-width:425px) {
+        .material-icons:not(:first-child) {
+            display: none;
+        }
+        .message h4 {
+            display: inline;
+        }
+        .flex{
+            flex-direction: column;
+        }
+    }
+    
 </style>

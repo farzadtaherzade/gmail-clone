@@ -2,7 +2,7 @@
     import { ref } from 'vue';
 
     const options = ref([
-        {icon:'inbox', title:'Primary', class:'red' , selected: false},
+        {icon:'inbox', title:'Primary', class:'red' , selected: true},
         {icon:'people', title:'Social', class:'blue' , selected: false},
         {icon:'local_offer', title:'Promotions', class:'green' , selected: false},
     ])
@@ -75,6 +75,12 @@
     .tab-list:hover:not(:first-child){
         background-color: rgba(0, 0, 0,.05);
         color: #000;
+    }
+
+    @media (max-width: 560px) {
+        .tab-list {
+            display: none;
+        }
     }
 
 </style>

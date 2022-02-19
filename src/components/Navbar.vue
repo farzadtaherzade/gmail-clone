@@ -120,4 +120,25 @@
     transition: .01s ;
 }
 
+@media (max-width: 768px) {
+    .left-content img {
+        object-fit: contain;
+        height: 35px;
+    }
+    .conter-content{
+        flex: .9;
+    }
+}
+@media (max-width: 560px) {
+    .left-content img {
+        display: none;
+    }
+    .conter-content{
+        flex: 1;
+    }
+    .right-content span { 
+        display: none;
+    }
+}
+
 </style>
